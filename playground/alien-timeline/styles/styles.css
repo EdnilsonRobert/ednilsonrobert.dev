@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import url('./partials/_1_vars.css');
+@import url('./partials/_2_base.css');
+@import url('./partials/_3_elements.css');
+@import url('./partials/_4_layout.css');
+@import url('./partials/_5_ui.css');
+@import url('./partials/_6_utils.css');

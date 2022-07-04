@@ -1,0 +1,77 @@
+const solarSystem = {
+  sun: {
+    diameter: 1392700
+  },
+  planets: [
+    {
+      name: 'Mercury',
+      diameter: 4879.4,
+      farFromTheSun: 65978000
+    },
+    {
+      name: 'Venus',
+      diameter: 12104,
+      farFromTheSun: 108610000
+    },
+    {
+      name: 'Earth',
+      diameter: 12742,
+      farFromTheSun: 149300000,
+      moon: {
+        name: 'Moon',
+        diameter: 3474.2,
+        farFromTheEarth: 384400
+      }
+    },
+    {
+      name: 'Mars',
+      diameter: 6779,
+      farFromTheSun: 242490000
+    },
+    {
+      name: 'Jupiter',
+      diameter: 139820,
+      farFromTheSun: 758550000
+    },
+    {
+      name: 'Saturn',
+      diameter: 116460,
+      ringDiameter: 270000,
+      farFromTheSun: 1489200000 // 1.4892 * 10**9,
+    },
+    {
+      name: 'Uranus',
+      diameter: 50724,
+      farFromTheSun: 2955800000 // 2.9558 * 10**9
+    },
+    {
+      name: 'Neptune',
+      diameter: 49244,
+      farFromTheSun: 4475700000 // 4.4757 * 10**9
+    }
+  ]
+}
+
+const system = document.querySelector('.solar-system');
+const planets = solarSystem.planets;
+let scale = .001;
+
+console.log(planets);
+
+system.innerHTML = `
+  <div class="sun" data-name="Sun" style="width:${solarSystem.sun.diameter * scale}px; height:${solarSystem.sun.diameter * scale}px;"></div>
+`;
+
+planets.forEach(planet => {
+  console.log(planet);
+  let planetSize = planet.diameter * scale;
+  let planetDistance = planet.farFromTheSun * .0001;
+  let planetRing = planet.ringDiameter * scale;
+
+  let ring = planet.hasOwnProperty('ringDiameter') ?
+    `<div class="ring" style="width:${planetRing}px;">` : '';
+
+  system.innerHTML += `
+    <div class="planet" data-name="${planet.name}" style="width:${planetSize}px; height:${planetSize}px; margin-top:${planetDistance}px;">${ring}</div>
+  `;
+});
