@@ -1,0 +1,45 @@
+/* =============================================================================
+    CADERNO DE RECEITAS
+    CSS: RECIPES
+============================================================================= */
+
+.main-content {
+    padding: 1.2rem 1.2rem 4.8rem;
+}
+
+.main-recipe {
+    padding: 2.4rem 1.2rem;
+    border-radius: 1.2rem;
+    background-color: var(--color-clear);
+    box-shadow: 0 3px 3px var(--color-dark-25);
+}
+
+.main-recipe-list {
+    margin-top: 1.2rem;
+    padding-left: 3.6rem;
+}
+
+.main-recipe-note {
+    padding-left: 2.4rem;
+}
+
+.main-recipe-note {
+    margin-top: 1.2rem;
+    padding-left: 2.4rem;
+}
+
+.main-recipe-list li + li,
+.main-recipe-note + .main-recipe-note {
+    margin-top: .6rem;
+}
+
+.main-recipe-list li a {
+    color: var(--red);
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+
+.headline-3 {
+    margin-top: 2.4rem;
+    border-bottom: 1px solid var(--color-dark-25);
+}

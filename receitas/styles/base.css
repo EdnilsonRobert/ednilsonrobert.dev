@@ -1,0 +1,101 @@
+/* =============================================================================
+    CADERNO DE RECEITAS
+    CSS: BASE
+============================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root {
+    --color-clear: hsl(210,9%,92%);
+    --color-dark: hsl(210,29%,25%);
+    --color-medium: hsl(210,14%,39%);
+
+    --color-clear-75: hsla(210,9%,92%,75%);
+    --color-clear-50: hsla(210,9%,92%,50%);
+    --color-clear-25: hsla(210,9%,92%,25%);
+
+    --color-dark-75: hsla(210,29%,25%,75%);
+    --color-dark-50: hsla(210,29%,25%,50%);
+    --color-dark-25: hsla(210,29%,25%,25%);
+
+    --red: hsl(348,83%,47%);
+
+    --color-red-75: hsla(348,83%,47%,75%);
+    --color-red-50: hsla(348,83%,47%,50%);
+    --color-red-25: hsla(348,83%,47%,25%);
+
+    --highlighted: var(--red);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Cabin', sans-serif;
+    line-height: 1.5;
+    background-color: var(--color-dark-50);
+    color: var(--color-dark);
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+small {
+    font-size: 1.4rem;
+}
+
+.page {
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+.headline-1,
+.headline-2,
+.headline-3,
+.headline-4,
+.headline-5,
+.headline-6 {
+    font-weight: 600;
+}
+
+.text-display {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+}
+
+.hero-title {
+    padding: .6rem;
+    background-color: var(--red);
+    color: var(--color-clear);
+}
+
+.main-content {
+    background-color: var(--color-clear-50);
+}
+
+.colophon {
+    padding: 1.2rem;
+    background-color: var(--red);
+    color: var(--color-clear-75);
+}
+
+.text-regular { font-weight: 400; }
+.text-bold { font-weight: 600; }
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.text-highlighted { color: var(--highlighted); }
