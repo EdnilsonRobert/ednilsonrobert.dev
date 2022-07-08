@@ -166,7 +166,7 @@ const receitas = [
     ]
   },
   {
-    category: 'Pratos diversos',
+    category: 'Ovos',
     items: [
       {
         name: 'Omelete',
@@ -190,6 +190,40 @@ const receitas = [
           'Tomates cereja cortados em rodelas, mussarela ralada, orégano',
           'Blend de queijos (prato, mussarela e parmesão)',
           'Tiras de bacon tostado para decorar'
+        ]
+      },
+      {
+        name: 'Ovos de codorna em conserva',
+        keywords: 'ovo, codorna, conserva',
+        ingredients: [
+          '1 caixa de ovos de codorna (30 ovos)',
+          '1 colher de sopa de salsinha bem picada',
+          '1/2 colher de chá de pimenta calabresa',
+          '1/2 colher de chá de orégano',
+          '1/2 colher de chá de sal',
+          '1 colher de sopa de vinagre',
+          '2 colheres de sopa de azeite'
+        ],
+        howTo: [
+          'Depositar os ovos em uma vasilha com água para verificar aqueles que estão estragados (os que boiarem).',
+          'Mover os ovos cuidadosamente até uma panela, adicionar água até cobrir e adicionar um pouco de vinagre.',
+          'Levar ao fogo alto.',
+          'Mexer cuidadosamente os ovos até a água ferver para centralizar as gemas.',
+          'Baixar o fogo e deixar cozinhar por 12min assim que água ferver.',
+          'Retirar os ovos e colocar em água fria com gelo por 3min.',
+          'Depositar a salsinha no fundo do pote que armazenará os ovos.',
+          'Adicionar a pimenta calabresa, orégano, sal, vinagre e azeite.',
+          'Descascar os ovos [1] e depositá-los sobre os temperos.',
+          'Adicionar água filtrada [2] até cobrir os ovos no recipiente.',
+          'Mexer bem para misturar e armazenar em geladeira.'
+        ],
+        optionsTitle: 'Opções para a conserva',
+        options: [
+          'Junto aos demais temperos da conserva também é possível adicionar alho desidratado e pimenta-do-reino em grãos.'
+        ],
+        notes: [
+          '[1] Para descascar os ovos com mais facilidade basta espalmar cada ovo sobre uma tábua de corte e deslizar a mão em movimento de vai-e-vem fazendo uma leve pressão até que a casca comece a romper.',
+          '[2] Caso não tenha água filtrada basta ferver a água.',
         ]
       },
     ]
@@ -282,13 +316,86 @@ const receitas = [
     ]
   },
   {
+    category: 'Vegetais',
+    items: [
+    ]
+  },
+  {
+    category: 'Acompanhamentos',
+    items: [
+    ]
+  },
+  {
     category: 'Tempero caseiro',
     items: [
+      {
+        name: 'Tempero alho e cebola',
+        keywords: 'tempero, alho, cebola',
+        ingredients: [
+          '150g de dentes de alho',
+          '120g de cebola picada',
+          '2 colheres de chá de sal',
+          '2 colheres de sopa de azeite'
+        ],
+        howTo: [
+          'Triturar o alho e cebola em um processador até ficarem em pedaços bem pequenos.',
+          'Adicionar o sal e o azeite e triturar no processador até obter uma pasta.',
+          'Guardar em pote fechado e armazenar na geladeira.'
+        ],
+        optionsTitle: 'Opções',
+        options: [
+          'Adicionar um pouco de cheiro verde picado junto ao azeite.'
+        ]
+      },
     ]
   },
   {
     category: 'Lanches e sanduíches',
     items: [
+      {
+        name: 'Bauru caseiro',
+        keywords: 'bauru, lanche, sanduíche',
+        ingredients: [
+          'Pão francês',
+          '2 fatias de presunto na chapa',
+          'Tomate em rodelas',
+          'Orégano',
+          'Blend de queijos prato e mussarela',
+          'Água',
+          'Sal'
+        ],
+        howTo: [
+          'Cortar um pão ao meio e retirar o miolo na parte superior.',
+          'Adicionar as fatias de presunto e tomate na parte inferior. Salpicar orégano e salgar levemente.',
+          'Derreter os queijos em uma frigideira com água quente e colocá-lo na cova da parte superior do pão.'
+        ],
+        optionsTitle: 'Opções',
+        options: [
+          'Assim como na <a href="./receita.html?page=bauru-receita-original">receita original de bauru</a>, adicionar picles de pepino junto ao tomate.'
+        ]
+      },
+      {
+        // Bauru original: https://www.youtube.com/watch?v=Z4Hjezw7TKg
+        name: 'Bauru (receita original)',
+        keywords: 'bauru, lanche, sanduíche',
+        ingredients: [
+          'Pão francês',
+          'Rosbife frio e malpassado',
+          'Tomate em rodelas',
+          'Picles de pepino em rodelas',
+          'Blend de queijos', // [estepe, suíço, prato e gouda]
+          'Água',
+          'Sal'
+        ],
+        howTo: [
+          'Cortar um pão ao meio e retirar o miolo na parte superior.',
+          'Adicionar as fatias de rosbife, tomate e pepino na parte inferior. Salgar levemente.',
+          'Derreter os queijos em uma frigideira com água quente e colocá-lo na cova da parte superior do pão.'
+        ]
+        // gallery: [
+        //   '<iframe style="width:100%;" src="https://www.youtube.com/embed/Z4Hjezw7TKg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        // ]
+      },
     ]
   },
   {
@@ -307,6 +414,24 @@ const receitas = [
           'Adicionar o açúcar e água e levar a panela ao fogo baixo.',
           'Mexer até alcançar o ponto de geleia.'
         ],
+      },
+      {
+        name: 'Geleia de uva',
+        keywords: 'geleia, uva',
+        ingredients: [
+          '500g de uva sem sementes',
+          '100g de açúcar demerara',
+          '10ml de limão',
+          'Cravo e canela a gosto'
+        ],
+        howTo: [
+          'Depositar as uvas na água com vinagre por 5min.',
+          'Escorrer as uvas e cortá-las. Remover as sementes se estiver usando uvas com semente.',
+          'Levar as uvas cortadas até uma panela e cozinhar por 20min. Apertar as uvas com uma colher de pau durante o cozimento para soltar as cascas.',
+          'Escorrer e levar as uvas para bater no liquificador até obter um caldo.',
+          'Voltar as uvas para a panela e juntar o açúcar, limão, cravo e canela.',
+          'Mexer por 10 a 15min até alcançar o ponto de geleia.'
+        ]
       },
     ]
   },
@@ -409,6 +534,24 @@ const receitas = [
   {
     category: 'Drinks',
     items: [
+      {
+        name: 'Cuba libre',
+        keywords: 'drink, cuba, libre',
+        ingredients: [
+          '60ml de rum',
+          '4 fatias de limão',
+          '15ml de suco de limão',
+          '200ml de refrigerante de cola',
+          'Gelo'
+        ],
+        howTo: [
+          'Adicionar o rum a um copo do tipo Long Drink.',
+          'Adicionar três fatias de limão',
+          'Preencher o copo com gelo e adicionar o suco de limão.',
+          'Adicionar refrigerante até quase preencher o copo.',
+          'Posicionar uma fatia de limão na borda do copo para enfeitar.'
+        ]
+      },
     ]
   }
 ];

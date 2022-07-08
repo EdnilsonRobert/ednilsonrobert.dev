@@ -26,7 +26,7 @@ for(let r in recipes) {
       let image = `<img
         src="./images/img-${slugify(items[i].name)}.jpg"
         alt="${slugify(items[i].name)}"
-        onerror="this.onerror=null; this.src=''; this.alt='';">`
+        onerror="this.onerror=null; this.src=''; this.alt='';">`;
       document.querySelector('.hero-figure').innerHTML = image;
 
       recipeContainer.innerHTML += `<h2 class="headline-2 text-highlighted text-center">${items[i].name}</h2>`;
@@ -119,6 +119,22 @@ for(let r in recipes) {
           curiositiesList += `<li>${curiosities[c]}</li>`;
         }
         recipeContainer.innerHTML += `<ol class="main-recipe-list">${curiositiesList}</ol>`;
+      }
+
+      recipeContainer.innerHTML +=
+      `<div class="recipe-info">
+        <p>Categoria: ${recipes[r].category}</p>
+        <p>Tags: ${items[i].keywords}</p>
+      </div>`;
+
+      let gallery = items[i].gallery;
+      if (gallery) {
+        let galleryList = '';
+        recipeContainer.innerHTML += `<h3 class="headline-3">Galeria:</h3>`;
+        for (let g in gallery) {
+          galleryList += `<figure class="responsive-iframe">${gallery[g]}</figure>`;
+        }
+        recipeContainer.innerHTML += `<div class"recipe-gallery">${galleryList}</div>`;
       }
     }
   }
