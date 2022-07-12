@@ -35,8 +35,6 @@ body {
     background-size: 10rem 10rem;
 }
 
-/*
-*/
 .page {
     min-height: 100vh;
     display: flex;
@@ -45,7 +43,7 @@ body {
     align-items: center;
 }
 
-.solar-system.flex-column {
+.solar-system {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -55,15 +53,11 @@ body {
     overflow-x: hidden;
 }
 
-.sun,
-.planet {
+.sun {
+    --base: 100px;
     position: relative;
     border-radius: 50%;
     border: 1px solid #eaeaea;
-}
-
-.sun {
-    --base: 100px;
     background-color: white;
     box-shadow:
         0 0 calc(var(--base) * 2) calc(var(--base) * 1) #fbe602,
@@ -71,7 +65,13 @@ body {
         0 0 calc(var(--base) * 4.6) calc(var(--base) * 3) #fabc14;
 }
 
-.planet { background-color: var(--black-hex); }
+.planet {
+    position: relative;
+    margin-top: 6rem;
+    border-radius: 50%;
+    border: 1px solid #eaeaea;
+    background-color: var(--black-hex);
+}
 
 .sun::after,
 .planet::after {
@@ -91,7 +91,7 @@ body {
     position: absolute;
     left: 50%;
     bottom: 50%;
-    height: .2rem;
+    height: .3rem;
     background-color: rgba(255,255,255, .33);
     transform: translate(-50%, 50%) rotate(2.48deg);
 }
