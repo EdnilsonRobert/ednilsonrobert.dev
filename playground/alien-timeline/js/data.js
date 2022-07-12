@@ -21,8 +21,11 @@ const data = [
   },
   {
     time: 'Século 8 AC',
-    figure: 'prometheus.jpg',
-    happenings: 'O mito de Prometeu (sobre um titã que trouxe o homem à vida do barro e roubou o segredo do fogo dos deuses) aparece pela primeira vez na mitologia grega.'
+    happenings: 'O mito de Prometeu (sobre um titã que trouxe o homem à vida do barro e roubou o segredo do fogo dos deuses) aparece pela primeira vez na mitologia grega.',
+    figure: {
+      name: 'prometheus.jpg',
+      caption: 'O mito de Prometeu'
+    }
   },
   {
     time: '620 AC',
@@ -32,13 +35,13 @@ const data = [
     time: 'Século 1 DC',
     happenings: 'Os Engenheiros preparam uma "nave da morte", cheia de potes de gosma negra, para enviar à Terra a fim de destruir seus filhos rebeldes, a humanidade. O engenheiro decapitado encontrado pela tripulação do Prometheus em LV-223 foi datado com carbono de aproximadamente 2.000 anos antes.'
   },
+  /*
   {
     time: '1.990',
     icon: 'star icon-gold',
     figure: 'peter-weyland.jpg',
     happenings: 'Nasce Peter Weyland, o homem criador da Weyland Corp.'
   },
-  /*
   {
     time: '2004',
     happenings: 'Aliens e Predadores fazem coisas. Juntos. Se você viu os filmes AvP, então sabe que é melhor seguirmos em frente.'
@@ -244,3 +247,36 @@ const data = [
   */
 ];
 export default data;
+
+/*
+NOTES:
+
+Alien RPG
+O ano é 2183 - pouco mais de três anos desde a destruição da colônia Hadley's Hope no LV-426, o desaparecimento do USS Sulaco e o fechamento da prisão e obras de chumbo na Fiorina 161. A perda da Marinha Colonial de Sulaco junto com esses postos avançados patrocinados pela Weyland-Yutani, e as implicações do jogo sujo corporativo decorrente desses incidentes, criaram um ar de desconfiança entre a empresa e as Américas.
+Para adicionar lenha ao fogo, os conflitos entre os setores rivais do espaço aumentaram exponencialmente nos últimos cinco anos. Embora não confirmado, muitos acreditam que Hadley’s Hope foi um local de teste para uma das armas biológicas de Weyland-Yutani e que um estado inimigo enviou um navio de guerra para retirá-la da órbita com o nuclear. Outros acreditam que a empresa está trabalhando com uma nação desonesta para assumir o controle das colônias na fronteira.
+A década de 2180 é uma época perigosa para se estar vivo.
+
+REFERENCES:
+
+https://www.digitalspy.com/movies/a844657/alien-timeline-chronology-prometheus/
+https://alienanthology.fandom.com/wiki/Alien_Universe_Timeline
+https://web.archive.org/web/20200626222858/https://alienanthology.fandom.com/wiki/Alien_Universe_Timeline
+
+MOVIES:
+Predator (1987)
+Predator 2 (1990)
+Alien vs Predator (2004)
+Alien vs Predator Requiem (2007)
+The Predator (2018)
+Predators (2010)
+Opcional: Blade Runner (1982)
+Opcional: Soldado (1998)
+Opcional: Blade Runner 2049 (2017)
+Prometheus (2008)
+Alien Covenant (2017)
+Alien (1979)
+Aliens (1986)
+Alien 3 (1992)
+Alien Resurrection (1997)
+Opcional: Firefly (2002 a 2003) e Serenity (2005)
+*/

@@ -1,9 +1,137 @@
+/* =============================================================================
+    ALIEN TIMELINE
+============================================================================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-@import url('./partials/_1_vars.css');
-@import url('./partials/_2_base.css');
-@import url('./partials/_3_elements.css');
-@import url('./partials/_4_layout.css');
-@import url('./partials/_5_ui.css');
-@import url('./partials/_6_utils.css');
+:root {
+    --font-weight-regular: 400;
+    --font-weight-light: 300;
+    --font-weight-bold: 600;
+
+    --font-size-default: 1.6rem;
+    --font-size-large: 2.4rem;
+    --font-size-medium: 1.4rem;
+    --font-size-small: 1.2rem;
+
+    --font-family-default: 'Roboto', sans-serif;
+    --font-family-display: 'Michroma', sans-serif;
+
+    --line-height-default: 1.5;
+    --line-height-medium: 1.25;
+    --line-height-small: 1;
+
+    --black: hsl(252, 100%, 1%);
+    --green: hsl(191, 21%, 30%);
+    --white: hsl(205, 81%, 96%);
+
+    --green-75: hsla(191, 21%, 30%, 75%);
+    --green-50: hsla(191, 21%, 30%, 50%);
+    --green-25: hsla(191, 21%, 30%, 25%);
+
+    --white-75: hsla(205, 81%, 96%, 75%);
+    --white-50: hsla(205, 81%, 96%, 50%);
+    --white-25: hsla(205, 81%, 96%, 25%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--font-family-default);
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.page {
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    font-weight: var(--font-weight-regular);
+    font-family: var(--font-family-display);
+    line-height: var(--line-height-medium);
+}
+
+.display-1 { font-size: calc(var(--font-size-large) * 3); }
+.display-2 { font-size: calc(var(--font-size-large) * 2.5); }
+.display-3 { font-size: calc(var(--font-size-large) * 1.5); }
+.display-4 { font-size: calc(var(--font-size-large) * 1.25); }
+.display-5 { font-size: calc(var(--font-size-large) * 1); }
+.display-6 { font-size: calc(var(--font-size-large) * .75); }
+
+.headline-1, .headline-2, .headline-3, .headline-4, .headline-5, .headline-6 {
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-medium);
+}
+
+.headline-1 { font-size: calc(var(--font-size-default) * 3); }
+.headline-2 { font-size: calc(var(--font-size-default) * 2.5); }
+.headline-3 { font-size: calc(var(--font-size-default) * 1.5); }
+.headline-4 { font-size: calc(var(--font-size-default) * 1.25); }
+.headline-5 { font-size: calc(var(--font-size-default) * 1); }
+.headline-6 { font-size: calc(var(--font-size-default) * .75); }
+
+.main-content,
+.alien-timeline {
+    margin-top: 6rem;
+}
+
+.alien-timeline {
+    padding: 0 1.2rem;
+}
+
+.card {
+    max-width: 60rem;
+    margin: 0 auto;
+    border: 1px solid var(--green-75);
+    background-color: var(--green-25);
+}
+
+.card-header {
+    padding: 2.4rem 1.2rem;
+    border-bottom: 1px solid var(--green-75);
+    background-color: var(--green-50);
+}
+
+.card + .card {
+    margin-top: 2.4rem;
+}
+
+.card-text {
+    padding: 2.4rem;
+    color: var(--white-75);
+}
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.warning {
+    padding: 7.2rem 3.6rem;
+}
+
+.warning p {
+    padding: 2.4rem;
+    font-weight: 600;
+    font-size: 3.2rem;
+    text-align: center;
+    border-radius: 2.4rem;
+    border: 2px dashed crimson;
+    color: goldenrod;
+}

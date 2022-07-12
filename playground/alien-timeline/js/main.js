@@ -4,23 +4,22 @@ const img_path = './images'
 
 const timelineContainer = document.querySelector('.alien-timeline');
 
-timeline.forEach(card => {
-  let icon = card.icon ? `<i class="icon ${card.icon}"></i>` : '';
+for (let t in timeline) {
+  let card = timeline[t];
   let date = card.time ? card.time : 'Atenção';
-  let figure = card.figure ? `<figure class="card-figure"><img src="${img_path}/${card.figure}"></figure>` : '';
-  let video = card.video ? `<figure class="card-video">${card.video}</figure>` : '';
+  let figure = card.figure ? `<figure class="card-figure"><img class="card-image" src="${img_path}/${card.figure.name}" alt="${card.figure.caption}"></figure>` : '';
+  // let icon = card.icon ? `<i class="icon ${card.icon}"></i>` : '';
+  // let video = card.video ? `<figure class="card-video">${card.video}</figure>` : '';
 
   timelineContainer.innerHTML += `
     <article class="card">
-      <section class="card-header">
-        ${icon}
-        <h2 class="card-title">${date}</h2>
-      </section>
-      <section class="card-content">
+      <div class="card-header">
+        <h2 class="card-title display-5">${date}</h2>
+      </div>
+      <div class="card-content">
         <p class="card-text">${card.happenings}</p>
         ${figure}
-        ${video}
-      </section>
+      </div>
     </article>
   `;
-});
+}
