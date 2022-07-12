@@ -4,48 +4,110 @@
 ============================================================================= */
 
 .main-content {
-    padding: 1.2rem 1.2rem 4.8rem;
+    padding: 1.2rem 1.2rem 1.2rem;
 }
 
 .main-recipe {
     padding: 2.4rem 1.2rem;
-    border-radius: 1.2rem;
-    background-color: var(--color-clear);
-    box-shadow: 0 3px 3px var(--color-dark-25);
 }
 
-.main-recipe-list {
-    margin-top: 1.2rem;
-    padding-left: 3.6rem;
-}
-
-.main-recipe-note {
-    padding-left: 2.4rem;
-}
-
-.main-recipe-note {
-    margin-top: 1.2rem;
-    padding-left: 2.4rem;
-}
-
-.main-recipe-list li + li,
-.main-recipe-note + .main-recipe-note {
-    margin-top: .6rem;
-}
-
-.main-recipe-list li a {
+.main-recipe a {
     color: var(--red);
     text-decoration: none;
     border-bottom: 1px solid;
 }
 
-.headline-3 {
+.headline-4.has-underline {
     margin-top: 2.4rem;
-    border-bottom: 1px solid var(--color-dark-25);
 }
 
-.recipe-info {
-    margin-top: 4.8rem;
-    padding-top: 1.2rem;
-    border-top: 1px solid var(--color-dark-25);
+.list {
+    margin-top: 1.2rem;
+    padding-left: 3.6rem;
+}
+
+.list-item + .list-item {
+    margin-top: .6rem;
+}
+
+.list-item.custom-item {
+    list-style-type: none;
+}
+
+.list-item.custom-item::before {
+    content: "";
+    display: inline-block;
+    width: .3em;
+    height: .6em;
+    margin-left: -1em;
+    margin-right: 1.2rem;
+    border-bottom: 2px solid var(--highlighted);
+    border-right: 2px solid var(--highlighted);
+    transform: rotate(45deg);
+}
+
+.list-ordered {
+    counter-reset: li;
+    padding-left: 4rem;
+}
+
+.list-item.numerical-item {
+    counter-increment: li;
+    list-style-type: none;
+}
+
+.list-item.numerical-item::before {
+    content: counter(li);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.6em;
+    margin-right: 1rem;
+    text-align: center;
+    direction: rtl;
+    color: var(--highlighted);
+
+}
+
+.text-item {
+    padding-left: 2.4rem;
+}
+
+.text-item + .text-item {
+    margin-top: .6rem;
+}
+
+.figure + .figure {
+    margin-top: 2.4rem;
+}
+
+.figure-image {
+    border-radius: .6rem;
+}
+
+.figure-caption {
+    margin-top: .6rem;
+}
+
+.video video {
+    border-radius: .6rem;
+}
+
+.youtube-frame {
+    position: relative;
+    padding-top: 56.25%;
+}
+
+.youtube-frame iframe {
+    /* Size: 560x315 | Ratio: 16x9 | padding-top: 56.25% */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: .6rem;
+}
+
+.image-gallery + .youtube-frame,
+.image-gallery + .video-gallery {
+    margin-top: 2.4rem;
 }

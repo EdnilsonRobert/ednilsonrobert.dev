@@ -1,0 +1,64 @@
+/* =============================================================================
+    CLOCKWORK
+============================================================================= */
+
+// SETTINGS
+// Variáveis globais
+@import '1-settings/settings.vars';
+
+// TOOLS
+// Funções, mixins e placeholders
+@import '2-tools/tools.mixins';
+@import '2-tools/tools.functions';
+
+// GENERIC
+// Normalização de elementos e 3rd party
+@import '3-generic/google-fonts';
+@import '3-generic/generic.reset';
+@import '3-generic/generic.normalize';
+
+// BASE
+// Átomos: elementos por typo
+@import '4-base/base.elements';
+
+// OBJECTS
+// Moléculas: elementos reutilizáveis e design patterns
+@import '5-objects/layout.wireframe';
+@import '5-objects/layout.containers';
+@import '5-objects/layout.grid';
+@import '5-objects/layout.flex';
+@import '5-objects/typography.healines';
+@import '5-objects/typography.text-formatting';
+@import '5-objects/object.lists';
+@import '5-objects/object.tables';
+@import '5-objects/object.image';
+@import '5-objects/object.audio';
+@import '5-objects/object.video';
+@import '5-objects/object.buttons';
+@import '5-objects/graphic.loaders';
+@import '5-objects/graphic.progress';
+@import '5-objects/graphic.knobs';
+
+// COMPONENTS
+// Organismos: componentes complexos
+@import '6-components/component.toolbars';
+@import '6-components/component.modals';
+@import '6-components/component.menus';
+@import '6-components/component.messages';
+@import '6-components/forms.text-fields';
+@import '6-components/forms.selectors';
+@import '6-components/component.carousel';
+@import '6-components/dashboard.donuts';
+@import '6-components/dashboard.piechart';
+@import '6-components/dashboard.bars-h';
+@import '6-components/dashboard.bars-v';
+
+// THEME
+// Temas default e alternativo
+@import '7-theme/theme.clear';
+@import '7-theme/theme.dark';
+
+// TRUMPS
+// Helpers: ids e !important
+// CSS Namespaces: o-object, c-component. js-javascript, is/has-behavior
+@import '8-trumps/utils.utilities';

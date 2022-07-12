@@ -1,0 +1,21 @@
+{
+  "short_name": "Receitas",
+  "name": "Caderno de Receitas",
+  "description": "Caderno de Receitas do Ed",
+  "icons": [
+    {
+      "src":"./favicon.svg",
+      "sizes": "256x256",
+      "type": "image/svg+xml"
+    },
+    {
+      "src":"./favicon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": "./",
+  "background_color": "hsla(210,9%,92%,50%)",
+  "theme_color": "#dc143c",
+  "display": "standalone"
+}

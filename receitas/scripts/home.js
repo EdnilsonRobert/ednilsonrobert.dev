@@ -15,7 +15,7 @@ for (let r in recipes) {
 }
 
 // PAGE
-document.querySelector('.total-index').innerHTML = `<b>${totalItems}</b> receitas`;
+document.querySelector('.total-index').innerHTML = totalItems;
 
 for (let r in recipes) {
   let items = recipes[r].items;
@@ -23,23 +23,30 @@ for (let r in recipes) {
 
   for (let i in items) {
     itemsList +=
-    `<li class="index-list-item">
-      <figure class="index-list-item-figure">
-        <img src="./images/img-${slugify(items[i].name)}.jpg"
+    `<li class="card">
+      <figure class="card-figure">
+        <img class="card-image" src="./images/img-${slugify(items[i].name)}.jpg"
           onerror="this.onerror=null; this.src='https://via.placeholder.com/960x600.png?text=Sem+imagem';"
           alt="${slugify(items[i].name)}">
       </figure>
-      <a class="index-list-item-link" href="./receita.html?page=${slugify(items[i].name)}">${items[i].name}</a>
+      <div class="card-body">
+        <a class="button" href="./receita.html?page=${slugify(items[i].name)}">${items[i].name}</a>
+      </div>
     </li>`;
   };
 
   if (items.length != 0) {
     grid.innerHTML += `
-    <section class="index-item">
-      <h3 class="index-title heading-3 text-regular">${recipes[r].category} <small>${items.length} ${items.length == 1 ? 'receita' : 'receitas'}</small></h3>
-      <ul class="index-list">
+    <section class="card-display">
+      <h3 class="headline-4 flex has-underline">${recipes[r].category} <small class="caption">${items.length} ${items.length == 1 ? 'receita' : 'receitas'}</small></h3>
+      <ul class="card-grid">
         ${itemsList}
       </ul>
+    </section>`;
+  } else {
+    grid.innerHTML += `
+    <section class="card-display">
+      <h3 class="headline-4 flex has-underline">${recipes[r].category} <small class="caption">Não há receitas</small></h3>
     </section>`;
   }
 }

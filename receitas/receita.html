@@ -29,9 +29,10 @@
     <!-- Folhas de estilo -->
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/recipes.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <!-- Manifesto -->
-    <!-- <link rel="manifest" href="./manifest.webmanifest"> -->
+    <link rel="manifest" href="./manifest.webmanifest">
 
     <!-- Diversos -->
     <!-- <link rel="canonical" href="http://localhost:3000"> -->
@@ -39,13 +40,14 @@
 
 <body>
     <div class="page">
-        <header class="hero">
-            <h1 class="hero-title text-display text-center">Caderno de Receitas do Ed</h1>
-            <figure class="hero-figure"></figure>
+        <header class="toolbar">
+            <h1 class="toolbar-title headline-4 display">Caderno de Receitas do Ed</h1>
+            <a class="material-icons" href="./">home</a>
         </header>
+        <figure class="hero-figure"></figure>
 
         <main class="main-content">
-            <article class="main-recipe"></article>
+            <article class="main-recipe card"></article>
         </main>
 
         <footer class="colophon">

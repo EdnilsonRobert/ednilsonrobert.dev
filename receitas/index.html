@@ -38,7 +38,7 @@
     <meta property="og:url" content="https://ednilsonrobert.dev/receitas/">
 
     <!-- Manifesto -->
-    <!-- <link rel="manifest" href="./manifest.webmanifest"> -->
+    <link rel="manifest" href="./manifest.webmanifest">
 
     <!-- Diversos -->
     <!-- <link rel="canonical" href="http://localhost:3000"> -->
@@ -47,15 +47,16 @@
 <body>
     <div class="page">
         <header class="hero">
+            <h1 class="hero-title headline-3 display is-featured">Caderno de Receitas do Ed</h1>
             <figure class="hero-figure">
                 <img class="hero-image" src="./images/header.jpg" alt="Vegetables">
             </figure>
-            <h1 class="hero-title text-display text-center">Caderno de Receitas do Ed</h1>
         </header>
 
         <main class="main-content">
-            <h2 class="text-display text-highlighted text-center">Índice de receitas</h2>
-            <p class="total-index text-center"></p>
+            <h2 class="headline-1 display text-center">Receitas por categoria</h2>
+            <hr class="hr-small">
+            <p class="caption text-center">Total de <b class="total-index"></b> receitas</p>
 
             <article class="recipe-index"></article>
         </main>
