@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
+:root {
+    --gray: #34495e;
+    --gray-50: #ebedef;
+    --gray-100: #d6dbdf;
+    --gray-200: #aeb6bf;
+    --gray-300: #85929e;
+    --gray-400: #5d6d7e;
+    --gray-500: #34495e;
+    --gray-600: #2e4053;
+    --gray-700: #283747;
+    --gray-800: #212f3c;
+    --gray-900: #1b2631;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: unset;
+    padding: unset;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Oxygen', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-color: var(--gray-100);
+    color: var(--gray-700);
+}
+
+.page {
+    max-width: 48rem;
+    padding: 0 2.4rem;
+}
+
+.headline-1,
+.headline-2 {
+    font-weight: 300;
+}
+
+.headline-5 {
+    margin-top: 2.4rem;
+}
+
+.cursor {
+    font-family: inherit;
+    animation: cursor 700ms linear 100ms infinite;
+}
+
+.material-icons {
+    vertical-align: middle;
+    fill: currentColor;
+}
+
+@keyframes cursor { from { opacity: 1; } 33%  { opacity: 0; } 66%  { opacity: 0; } top  { opacity: 1; } }
