@@ -48,6 +48,7 @@ html {
 
 body {
     font-size: 1.6rem;
+    line-height: var(--line-height-default);
     background-color: var(--black);
     color: var(--white);
 }
@@ -88,25 +89,60 @@ img {
 .headline-5 { font-size: calc(var(--font-size-default) * 1); }
 .headline-6 { font-size: calc(var(--font-size-default) * .75); }
 
-.main-content,
-.alien-timeline {
+.main-content {
     margin-top: 6rem;
 }
 
 .alien-timeline {
-    padding: 0 1.2rem;
+    position: relative;
+    margin: 4.8rem 1.2rem 0;
+    padding: 1.2rem 0 0 4.8rem;
+    border-left: 1px solid var(--green-50);
+}
+
+.alien-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1.2rem solid;
+    border-color: var(--green-75) transparent transparent;
+    transform: translate(-50%, -50%);
 }
 
 .card {
+    position: relative;
     max-width: 60rem;
     margin: 0 auto;
-    border: 1px solid var(--green-75);
     background-color: var(--green-25);
+}
+
+.card::before,
+.card::after {
+    content: '';
+    position: absolute;
+    top: calc(2.4rem + (3rem / 2)); /* .card-header:padding + (.card-title:lineHeight / 2) */
+}
+
+.card::before {
+    right: 100%;
+    width: 4.8rem;
+    border-top: 1px solid var(--green-50);
+}
+
+.card::after {
+    left: -4.9rem;
+    width: .6rem;
+    height: .6rem;
+    border-radius: 50%;
+    background-color: var(--green);
+    transform: translate(-50%, -50%);
 }
 
 .card-header {
     padding: 2.4rem 1.2rem;
-    border-bottom: 1px solid var(--green-75);
+    border-radius: 0 1.2rem 0 0;
+    border: 1px solid var(--green-75);
     background-color: var(--green-50);
 }
 
@@ -114,16 +150,60 @@ img {
     margin-top: 2.4rem;
 }
 
+.card:last-child {
+    transform: translateY(calc(2.4rem + (3rem / 2))); /* .card-header:padding + (.card-title:lineHeight / 2) */
+}
+
+.card-content {
+    border: 1px solid var(--green-50);
+    border-top: none;
+}
+
 .card-text {
     padding: 2.4rem;
     color: var(--white-75);
+}
+
+.related-content {
+    margin-top: 12rem;
+}
+
+.list {
+    margin-left: 6rem;
+    margin-top: 3.6rem;
+}
+
+.list ::marker {
+    color: var(--green);
+}
+
+.list li {
+    line-height: 2;
+    color: var(--white-75);
+}
+
+.list del {
+    color: crimson;
+}
+
+.list cite {
+    font: inherit;
+    color: goldenrod;
+}
+
+.list a {
+    color: inherit;
+}
+
+ul + h2 {
+    margin-top: 6rem;
 }
 
 .text-center { text-align: center; }
 .text-right { text-align: right; }
 
 .warning {
-    padding: 7.2rem 3.6rem;
+    padding: 7.2rem 3.6rem 7.2rem;
 }
 
 .warning p {

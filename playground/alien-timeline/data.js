@@ -261,22 +261,4 @@ REFERENCES:
 https://www.digitalspy.com/movies/a844657/alien-timeline-chronology-prometheus/
 https://alienanthology.fandom.com/wiki/Alien_Universe_Timeline
 https://web.archive.org/web/20200626222858/https://alienanthology.fandom.com/wiki/Alien_Universe_Timeline
-
-MOVIES:
-Predator (1987)
-Predator 2 (1990)
-Alien vs Predator (2004)
-Alien vs Predator Requiem (2007)
-The Predator (2018)
-Predators (2010)
-Opcional: Blade Runner (1982)
-Opcional: Soldado (1998)
-Opcional: Blade Runner 2049 (2017)
-Prometheus (2008)
-Alien Covenant (2017)
-Alien (1979)
-Aliens (1986)
-Alien 3 (1992)
-Alien Resurrection (1997)
-Opcional: Firefly (2002 a 2003) e Serenity (2005)
 */
