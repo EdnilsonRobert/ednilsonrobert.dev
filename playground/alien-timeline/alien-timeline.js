@@ -1,3 +1,7 @@
+/* =============================================================================
+    ALIEN TIMELINE
+============================================================================= */
+
 import data from './data.js';
 const timeline = data;
 const img_path = './images'
@@ -14,7 +18,7 @@ for (let t in timeline) {
   timelineContainer.innerHTML += `
     <article class="card">
       <div class="card-header">
-        <h2 class="card-title display-5">${date}</h2>
+        <h3 class="card-title display-5">${date}</h3>
       </div>
       <div class="card-content">
         <p class="card-text">${card.happenings}</p>
@@ -23,3 +27,11 @@ for (let t in timeline) {
     </article>
   `;
 }
+
+timelineContainer.innerHTML += `
+  <article class="card">
+    <div class="card-header">
+      <h3 class="card-title display-5">Aguardando novos episódios...</h3>
+    </div>
+  </article>
+`

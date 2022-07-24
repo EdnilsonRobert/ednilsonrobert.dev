@@ -1,0 +1,425 @@
+/* =============================================================================
+    MAGNEMITE CSS ANIMATION
+============================================================================= */
+
+:root {
+    --time-faster: 1.2s;
+    --time-slower: 1.5s;
+}
+
+/* Magnemite model ---------------------------------------------------------- */
+.magnemite-model {
+    max-width: 36rem;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: .6rem;
+}
+
+/* Magnemite animation ------------------------------------------------------ */
+.magnemite-frame {
+    position: relative;
+    width: 36rem;
+    height: 36rem;
+    margin: 6rem auto;
+    border-radius: .6rem;
+    border: 1px solid hsla(0, 0%, 0%, .25);
+    background-color: hsl(213, 80%, 17%);
+}
+
+.magnemite {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    width: 37%;
+    height: 37%;
+    transform: translateX(-50%);
+    animation: body-swing var(--time-faster) cubic-bezier(.46,.03,.52,.96) infinite;
+}
+
+@keyframes body-swing {
+    from { top: 38%; }
+    50% { top: 32%; transform: translateX(-50%) scale(.96); }
+    to { top: 38%; }
+}
+
+.magnemite-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: hsl(196, 92%, 86%);
+    background-image: radial-gradient(hsla(0, 0%, 0%, 0) 30%, hsla(0, 0%, 0%, .2) 60%, hsla(0, 0%, 0%, 0) 90%);
+}
+
+.magnemite-eye {
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    width: 48%;
+    height: 48%;
+    border-radius: 50%;
+    border: .4rem solid hsl(0, 0%, 0%, .75);
+    background-image: linear-gradient(to right bottom, hsl(0, 0%, 100%), hsl(0, 0%, 85%));
+    transform: translateX(-50%);
+}
+
+.magnemite-eye::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15%;
+    height: 15%;
+    border-radius: 50%;
+    background-color: hsla(0, 0%, 0%, .9);
+    transform: translate(-50%, -50%);
+}
+
+.magnemite-top-screw {
+    position: absolute;
+    left: 50%;
+    bottom: 99%;
+    width: 16%;
+    height: 30%;
+    background-color: hsl(0, 0%, 0%);
+    background-image: linear-gradient(to right, hsla(214, 25%, 78%, .75), hsla(218, 12%, 62%, 75%));
+    transform: translateX(-50%);
+}
+
+.magnemite-top-screw::before,
+.magnemite-top-screw::after {
+    content: '';
+    position: absolute;
+}
+
+.magnemite-top-screw::before {
+    left: 50%;
+    bottom: 95%;
+    z-index: 1;
+    width: 330%;
+    height: 45%;
+    border-radius: 50% / 50% 50% 30% 30%;
+    background-color: hsl(0, 0%, 100%);
+    background-image: linear-gradient(to right, hsla(214, 25%, 78%, .9), hsla(218, 12%, 62%, .9));
+    transform: translateX(-50%);
+}
+
+.magnemite-top-screw::after {
+    left: 50%;
+    bottom: 115%;
+    z-index: 2;
+    width: 70%;
+    height: 25%;
+    border-radius: 0 0 50% 50%;
+    background-color: hsl(275, 8%, 29%);
+    transform-origin: top center;
+    transform: translateX(-50%) skewX(0);
+    animation: top-screew-head-spin var(--time-slower) cubic-bezier(.46,.03,.52,.96) infinite;
+}
+
+@keyframes top-screew-head-spin {
+    from {}
+    50% { transform: translateX(-50%) skewX(-36deg); }
+    to {}
+}
+
+.magnemite-top-screw-threads {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 140%;
+    height: 120%;
+    transform: translate(-50%, -50%);
+    animation: top-screew-threads-spin var(--time-slower) cubic-bezier(.46,.03,.52,.96) infinite;
+}
+
+@keyframes top-screew-threads-spin {
+    from {}
+    50% { transform: translate(-50%, -60%); }
+    to {}
+}
+
+.magnemite-top-screw-thread {
+    width: 100%;
+    height: 12%;
+    border-radius: 50% / 25%;
+    background-image: linear-gradient(to right, hsl(214, 25%, 78%), hsl(218, 12%, 62%));
+    transform: rotate(-10deg);
+}
+
+.magnemite-left-magnet {
+    position: absolute;
+    right: 99%;
+    top: 44%;
+    width: 68%;
+    height: 56%;
+    border-radius: 0 36% 36% 0 / 0 48% 48% 0;
+    border-right: 1.8rem solid hsl(214, 25%, 78%);
+    border-top: 2.4rem solid hsl(214, 25%, 78%);
+    border-bottom: 2.4rem solid hsl(214, 25%, 78%);
+    box-shadow: 0 .6rem 0 0 hsl(218, 12%, 62%), inset 0 .6rem 0 0 hsl(218, 12%, 62%);
+    transform-origin: center right;
+    transform: translateY(-50%) rotate(6deg);
+    animation: left-magnet-swing var(--time-faster) cubic-bezier(.46,.03,.52,.96) infinite;
+}
+
+@keyframes left-magnet-swing {
+    from {}
+    50% {
+        border-top-width: 1.8rem;
+        border-bottom-width: 1.8rem;
+        border-color: hsl(218, 12%, 62%);
+        box-shadow: 0 -.6rem 0 0 hsl(214, 25%, 78%), inset 0 -.6rem 0 0 hsl(214, 25%, 78%);
+        transform: translateY(-50%) rotate(-6deg);
+    }
+    to {}
+}
+
+.magnemite-right-magnet {
+    position: absolute;
+    left: 99%;
+    top: 48%;
+    width: 72%;
+    height: 56%;
+    border-radius: 36% 0 0 36% / 48% 0 0 48%;
+    border-left: 1.8rem solid hsl(214, 25%, 78%);
+    border-top: 2.4rem solid hsl(214, 25%, 78%);
+    border-bottom: 2.4rem solid hsl(214, 25%, 78%);
+    box-shadow: 0 .6rem 0 0 hsl(218, 12%, 62%), inset 0 .6rem 0 0 hsl(218, 12%, 62%);
+    transform-origin: center left;
+    transform: translateY(-50%) rotate(-6deg);
+    animation: right-magnet-swing var(--time-faster) cubic-bezier(.46,.03,.52,.96) infinite;
+}
+
+@keyframes right-magnet-swing {
+    from {}
+    50% {
+        border-top-width: 1.8rem;
+        border-bottom-width: 1.8rem;
+        border-color: hsl(218, 12%, 62%);
+        box-shadow: 0 -.6rem 0 0 hsl(214, 25%, 78%), inset 0 -.6rem 0 0 hsl(214, 25%, 78%);
+        transform: translateY(-50%) rotate(6deg);
+    }
+    to {}
+}
+
+.magnemite-left-magnet::before,
+.magnemite-left-magnet::after,
+.magnemite-right-magnet::before,
+.magnemite-right-magnet::after {
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 2.4rem;
+}
+
+.magnemite-left-magnet::before,
+.magnemite-left-magnet::after {
+    left: 0;
+}
+
+.magnemite-right-magnet::before,
+.magnemite-right-magnet::after {
+    right: 0;
+}
+
+.magnemite-left-magnet::before,
+.magnemite-right-magnet::before {
+    top: -2.4rem;
+}
+
+.magnemite-right-magnet::after,
+.magnemite-left-magnet::after {
+    bottom: -2.4rem;
+}
+
+.magnemite-left-magnet::before,
+.magnemite-right-magnet::after {
+    background-color: hsl(5, 49%, 55%);
+    box-shadow: 0 .6rem 0 0 hsl(8, 43%, 43%);
+}
+
+.magnemite-left-magnet::after,
+.magnemite-right-magnet::before {
+    background-color: hsl(200, 78%, 58%);
+    box-shadow: 0 .6rem 0 0 hsl(201, 56%, 46%);
+}
+
+.magnemite-left-magnet::before {
+    animation: left-magnet-red-pole-swing var(--time-faster) cubic-bezier(.46,.03,.52,.96) infinite;
+}
+
+.magnemite-left-magnet::after {
+    animation: left-magnet-blue-pole-swing var(--time-faster) cubic-bezier(.46,.03,.52,.96) infinite;
+}
+
+.magnemite-right-magnet::before {
+    animation: right-magnet-blue-pole-swing var(--time-faster) cubic-bezier(.46,.03,.52,.96) infinite;
+}
+
+.magnemite-right-magnet::after {
+    animation: right-magnet-red-pole-swing var(--time-faster) cubic-bezier(.46,.03,.52,.96) infinite;
+}
+
+@keyframes left-magnet-red-pole-swing {
+    from {}
+    50% {
+        top: -1.8rem;
+        height: 1.8rem;
+        background-color: hsl(8, 43%, 43%);
+        box-shadow: 0 -.6rem 0 0 hsl(5, 49%, 55%);
+    }
+    to {}
+}
+
+@keyframes left-magnet-blue-pole-swing {
+    from {}
+    50% {
+        bottom: -1.8rem;
+        height: 1.8rem;
+        background-color: hsl(201, 56%, 46%);
+        box-shadow: 0 -.6rem 0 0 hsl(200, 78%, 58%);
+    }
+    to {}
+}
+
+@keyframes right-magnet-red-pole-swing {
+    from {}
+    50% {
+        bottom: -1.8rem;
+        height: 1.8rem;
+        background-color: hsl(8, 43%, 43%);
+        box-shadow: 0 -.6rem 0 0 hsl(5, 49%, 55%);
+    }
+    to {}
+}
+
+@keyframes right-magnet-blue-pole-swing {
+    from {}
+    50% {
+        top: -1.8rem;
+        height: 1.8rem;
+        background-color: hsl(201, 56%, 46%);
+        box-shadow: 0 -.6rem 0 0 hsl(200, 78%, 58%);
+    }
+    to {}
+}
+
+.magnemite-left-screw,
+.magnemite-right-screw {
+    position: absolute;
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 100%);
+    background-image: linear-gradient(to bottom, hsla(214, 25%, 78%, .5), hsl(218, 12%, 62%));
+}
+
+.magnemite-left-screw {
+    left: 0;
+    bottom: 1%;
+    width: 22%;
+    height: 20%;
+}
+
+.magnemite-right-screw {
+    right: 3%;
+    bottom: 0;
+    width: 22%;
+    height: 21%;
+}
+
+.magnemite-left-screw::before,
+.magnemite-right-screw::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    width: 50%;
+    height: 40%;
+    border-radius: 50% 50% 0 0 / 40% 40% 0 0;
+    background-color: hsla(220, 9%, 38%, .75);
+    transform-origin: bottom center;
+}
+
+.magnemite-left-screw { transform: rotate(60deg); }
+.magnemite-right-screw { transform: rotate(-60deg); }
+
+.magnemite-left-screw::before { transform: translateX(-50%); }
+.magnemite-right-screw::before { transform: translateX(-50%); }
+
+.magnemite-screw-head {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
+
+.magnemite-left-screw .magnemite-screw-head {
+    transform: translate(-50%, -50%) rotate(15deg);
+    animation: screw-rotate-ccw var(--time-slower) cubic-bezier(.46,.03,.52,.96) infinite;
+}
+
+.magnemite-right-screw .magnemite-screw-head {
+    transform: translate(-50%, -50%) rotate(-15deg);
+    animation: screw-rotate-cw var(--time-slower) cubic-bezier(.46,.03,.52,.96) infinite;
+}
+
+@keyframes screw-rotate-ccw {
+    from {}
+    50% { transform: translate(-50%, -50%) rotate(-15deg); }
+    to {}
+}
+
+@keyframes screw-rotate-cw {
+    from {}
+    50% { transform: translate(-50%, -50%) rotate(15deg); }
+    to {}
+}
+
+.magnemite-screw-head::before,
+.magnemite-screw-head::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-radius: 50% / 25%;
+    background-color: hsl(275, 8%, 29%);
+}
+
+.magnemite-screw-head::before {
+    width: 30%;
+    height: 100%;
+}
+
+.magnemite-screw-head::after {
+    width: 100%;
+    height: 30%;
+}
+
+.magnemite-left-screw .magnemite-screw-head::before {
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.magnemite-right-screw .magnemite-screw-head::before {
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+.magnemite-left-screw .magnemite-screw-head::after {
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.magnemite-right-screw .magnemite-screw-head::after {
+    right: 50%;
+    transform: translate(50%, -50%);
+}

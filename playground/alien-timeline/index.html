@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" dir="ltr">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8">
     <title>Alien | Timeline</title>
@@ -7,6 +7,9 @@
     <!-- Robots -->
     <meta name="description" content="Linha do tempo da franquia Alien">
     <meta name="keywords" content="alien, timeline">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="3 days">
+    <meta name="google" content="notranslate">
 
     <!-- Humanos -->
     <meta name="author" content="Ednilson Robert">
@@ -24,24 +27,11 @@
     <meta http-equiv="Expires" content="0">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="./favicon.svg">
+    <link rel="shortcut icon" href="../favicon.svg">
 
     <!-- Folhas de estilo -->
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./alien-timeline.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-    <!-- Card URL | Open Graph -->
-    <meta property="og:title" content="Alien Timeline">
-    <meta property="og:type" content="website">
-    <!-- <meta property="og:description" content=""> -->
-    <meta property="og:image" content="https://ednilsonrobert.dev/playground/alien-timeline/images/aliens-logo.svg">
-    <meta property="og:url" content="https://ednilsonrobert.dev/playground/alien-timeline/">
-
-    <!-- Manifesto -->
-    <!-- <link rel="manifest" href="./manifest.webmanifest"> -->
-
-    <!-- Diversos -->
-    <!-- <link rel="canonical" href="https://ednilsonrobert.dev/playground/alien-timeline/"> -->
 </head>
 
 <body>
@@ -57,11 +47,46 @@
 
         <main class="main-content">
             <figure>
-                <h1 class="display-3 text-center">Alien Timeline</h1>
+                <h1 class="display-3 text-center"><span>Alien Timeline</span></h1>
             </figure>
 
             <section class="alien-timeline"></section>
         </main>
+
+        <aside class="related-content">
+            <h2 class="display-3 text-center">Filmes da franquia</h2>
+            <ul class="list">
+                <li><del>Predator (1987)</del></li>
+                <li><del>Predator 2 (1990)</del></li>
+                <li><cite>Alien vs Predator (2004)</cite></li>
+                <li><cite>Alien vs Predator Requiem (2007)</cite></li>
+                <li><del>The Predator (2018)</del></li>
+                <li><del>Predators (2010)</del></li>
+                <li><cite>Opcional: Blade Runner (1982)</cite></li>
+                <li><del>Opcional: Soldado (1998)</del></li>
+                <li><cite>Opcional: Blade Runner 2049 (2017)</cite></li>
+                <li>Prometheus (2008)</li>
+                <li>Alien Covenant (2017)</li>
+                <li>Alien (1979)</li>
+                <li>Aliens (1986)</li>
+                <li>Alien 3 (1992)</li>
+                <li>Alien Resurrection (1997)</li>
+                <li><del>Opcional: Firefly (2002 a 2003) e Serenity (2005)</del></li>
+            </ul>
+
+            <h2 class="display-3 text-center">Referências</h2>
+            <ul class="list">
+                <li>
+                    <a href="https://www.digitalspy.com/movies/a844657/alien-timeline-chronology-prometheus/" target="_blank">https://www.digitalspy.com/movies/a844657/alien-timeline-chronology-prometheus/</a>
+                </li>
+                <li>
+                    <a href="https://alienanthology.fandom.com/wiki/Alien_Universe_Timeline/" target="_blank">https://alienanthology.fandom.com/wiki/Alien_Universe_Timeline/</a>
+                </li>
+                <li>
+                    <a href="https://web.archive.org/web/20200626222858/https://alienanthology.fandom.com/wiki/Alien_Universe_Timeline/" target="_blank">https://web.archive.org/web/20200626222858/https://alienanthology.fandom.com/wiki/Alien_Universe_Timeline/</a>
+                </li>
+            </ul>
+        </aside>
 
         <footer class="warning">
             <p>Trabalho em construção</p>
@@ -69,6 +94,6 @@
     </div>
 </body>
 
-<script src="./js/main.js" type="module"></script>
+<script src="./alien-timeline.js" type="module"></script>
 
 </html>

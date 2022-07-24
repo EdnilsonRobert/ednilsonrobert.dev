@@ -1,0 +1,28 @@
+/* =============================================================================
+    ednilsonrobert.dev
+    CSS: PLAYGROUND
+============================================================================= */
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+}
+
+.button-social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.button-social span {
+    font-weight: 700;
+}
+
+.button-social svg {
+    margin-left: 1.2rem;
+    fill: currentColor;
+}

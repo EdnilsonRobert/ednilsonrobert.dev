@@ -1,3 +1,7 @@
+/* =============================================================================
+    SOLAR SYSTEM
+============================================================================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
 :root {
@@ -10,6 +14,9 @@
     --cyan-rgb: 83, 208, 255;
     --gold-rgb: 245, 177, 0;
     --white-rgb: 245, 245, 245;
+
+    --sunDiameter: 1392700rem;
+    --scale: .0001;
 }
 
 *,
@@ -33,6 +40,21 @@ body {
     background-repeat: repeat;
     background-position: center;
     background-size: 10rem 10rem;
+}
+
+.js-scroll-button {
+    position: fixed;
+    right: 3.6rem;
+    top: 3.6rem;
+    z-index: 1;
+    width: 9.6rem;
+    height: 4.8rem;
+    font-weight: 700;
+    border-radius: .3rem;
+    border-style: none;
+    background-color: var(--gold-hex);
+    box-shadow: 0 1px 1px rgba(var(--black-rgb), .5);
+    color: var(--black-hex);
 }
 
 .page {
@@ -67,10 +89,32 @@ body {
 
 .planet {
     position: relative;
-    margin-top: 6rem;
     border-radius: 50%;
     border: 1px solid #eaeaea;
     background-color: var(--black-hex);
+}
+
+.planet-info {
+    position: absolute;
+    left: 100%;
+    bottom: 50%;
+    padding: .6rem 2.4rem;
+    border-left: 1px solid rgba(var(--white-rgb), .33);
+    white-space: nowrap;
+    border-radius: 0 .6rem .6rem 0;
+    background-color: rgba(var(--black-rgb), .25);
+    color: var(--gold-hex);
+    transform: translate(12rem, 50%);
+}
+
+.planet-info::before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    bottom: 50%;
+    width: 9.6rem;
+    height: 1px;
+    background-color: rgba(var(--white-rgb), .33);
 }
 
 .sun::after,
